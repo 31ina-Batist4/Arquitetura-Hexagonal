@@ -27,4 +27,5 @@ O projeto segue o padrão **Arquitetura Hexagonal (Ports and Adapters)**, que pr
 - Facilidade de troca de tecnologias externas
 
 ### Visão Geral da Arquitetura
+## 📁 Estrutura de Pastas
 
