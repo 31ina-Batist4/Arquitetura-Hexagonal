@@ -23,7 +23,7 @@ import static org.apache.kafka.clients.consumer.ConsumerConfig.*;
 public class KafkaConsumerConfig {
 
     @Bean
-    public ConsumerFactory<String, CustomerMessage> consumererFactory () {
+    public ConsumerFactory<String, CustomerMessage> consumerFactory () {
         Map<String, Object> props = new HashMap<>();
         props.put(BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(GROUP_ID_CONFIG, "elina");
@@ -39,7 +39,7 @@ public class KafkaConsumerConfig {
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, CustomerMessage> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String , CustomerMessage> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(consumererFactory());
+        factory.setConsumerFactory(consumerFactory());
         return factory;
     }
 
