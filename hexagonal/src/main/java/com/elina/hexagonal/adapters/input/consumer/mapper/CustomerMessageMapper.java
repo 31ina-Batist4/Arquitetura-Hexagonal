@@ -8,6 +8,6 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface CustomerMessageMapper {
 
-    @Mapping(target = "address.zipCode",  ignore = true)
+    @Mapping(target = "zipCode",  ignore = true)
     Customer toCustomer(CustomerMessage customerMessage);
 }
